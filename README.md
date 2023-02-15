@@ -5,7 +5,7 @@ Words list is very expensive and has a lot of different type of some words and h
 You can use this two methods to get required data:  
 `from mnk_persian_words.persian_words import get_random_persian_paragraph, get_random_persian_word`  
 import package and functions (because size of python file is large , some IDEs can not find functions in code completion.  
-Also, if you see any errors in finding functions , just ignore it , or use print(dir(persian_words)) to see functions names.)  
+Also, if you see any errors in finding functions , just ignore it , or use `print(dir(persian_words))` to see functions names.)  
 `get_random_persian_word(words_count: int =1)`  
 Get a random words or as many as you want (less than 240,000!) as a string containing words seperated by space(" ") without trailing dot(".")  
 `get_random_persian_paragraph(words_count: int = 5, paragraphs: int = 1)`  
