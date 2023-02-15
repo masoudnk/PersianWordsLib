@@ -19,12 +19,7 @@ Get a random words or as many as you want (less than 240,000!) as a string conta
 `get_random_persian_paragraph(words_count: int = 5, paragraphs: int = 1)`
 Get a paragraph or as many as you want with each paragraph containing as many words as you want (less than 240,000!) as a string which **words seperated by space(" ")** and every paragraph before last paragraph has an **BreakLine("\n") at the end** also there is **no trailing dot**(".") 
 
-Home-page: https://github.com/NinjaSnail1080/akinator.py
-Author: NinjaSnail1080
-Author-email: innuganti.ashwin@gmail.com
+Home-page: [https://github.com/masoudnk/PersianWordsLib](https://github.com/masoudnk/PersianWordsLib)
+Author: Masoud Najafzadeh Kalat
+Author-email: masoudnk2@gmail.com
 License: MIT License
-
-Copyright (c) 2019 NinjaSnail1080
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
