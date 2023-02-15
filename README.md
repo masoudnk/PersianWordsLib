@@ -23,3 +23,5 @@ Home-page: [https://github.com/masoudnk/PersianWordsLib](https://github.com/maso
 Author: Masoud Najafzadeh Kalat
 Author-email: masoudnk2@gmail.com
 License: MIT License
+
+Words used in this library supported: [khodam.altervista.org/لیست-همه-کلمات-فارسی-مجموعه-کامل/]()
