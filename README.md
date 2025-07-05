@@ -1,17 +1,108 @@
-Name: **PersianWords**  
-Version: 0.1.6  
-Summary:This library gives you some random words and paragraphs in persian language.  
-Words list is very expensive and has a lot of different type of some words and how they are written.  
-You can use this two methods to get required data:  
-`from mnk_persian_words.persian_words import get_random_persian_paragraph, get_random_persian_word`  
-import package and functions (because size of python file is large , some IDEs can not find functions in code completion.  
-Also, if you see any errors in finding functions , just ignore it , or use `print(dir(persian_words))` to see functions names.)  
-`get_random_persian_word(words_count: int =1)`  
-Get a random words or as many as you want (less than 240,000!) as a string containing words seperated by space(" ") without trailing dot(".")  
-`get_random_persian_paragraph(words_count: int = 5, paragraphs: int = 1)`  
-Get a paragraph or as many as you want with each paragraph containing as many words as you want (less than 240,000!) as a string which **words seperated by space(" ")** and every paragraph before last paragraph has an **BreakLine("\n") at the end** also there is **no trailing dot**(".")   
-Home-page: [https://github.com/masoudnk/PersianWordsLib](https://github.com/masoudnk/PersianWordsLib)  
-Author: Masoud Najafzadeh Kalat  
-Author-email: masoudnk2@gmail.com  
-License: MIT License  
-Words used in this library supported: [http://khodam.altervista.org/%D9%84%DB%8C%D8%B3%D8%AA-%D9%87%D9%85%D9%87-%DA%A9%D9%84%D9%85%D8%A7%D8%AA-%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87-%DA%A9%D8%A7%D9%85%D9%84/]()
+
+# PersianWords
+
+**Version**: 1.0.1  
+**License**: MIT  
+**Author**: Masoud Najafzadeh Kalat  
+**Email**: masoudnk2@gmail.com  
+**GitHub**: [https://github.com/masoudnk/PersianWordsLib](https://github.com/masoudnk/PersianWordsLib)
+
+---
+
+## 📝 Summary
+
+**PersianWords** is a Python library that provides random words and paragraphs in the Persian language.  
+The internal word list is extensive and includes various types, forms, and orthographic variants (including diacritics).
+
+This library currently contains over **600,000 unique Persian words**, making it ideal for:
+
+- UI/UX text generation (like "Lorem Ipsum" for Persian)
+- Educational apps and games
+- NLP model testing
+- Language research and simulations
+
+---
+
+## 📦 Installation
+
+Coming soon to PyPI...
+
+For now, you can install directly from source:
+
+```bash
+git clone https://github.com/masoudnk/PersianWordsLib.git
+cd PersianWordsLib
+````
+
+---
+
+## 🔧 Usage
+
+Import the package and use the functions as follows:
+
+```python
+from mnk_persian_words.persian_words import (
+    get_random_persian_word,
+    get_random_persian_paragraph
+)
+```
+
+---
+
+## 🧠 Functions
+
+### `get_random_persian_word(words_count: int = 1) -> str`
+
+Returns a space-separated string of `words_count` randomly selected Persian words.
+
+* Output contains **no punctuation or trailing dots**
+* Maximum count: 600,000+
+
+```python
+get_random_persian_word(3)
+# Output: 'خانه گل زیبا'
+```
+
+---
+
+### `get_random_persian_paragraph(words_count: int = 5, paragraphs: int = 1) -> str`
+
+Returns `paragraphs` paragraphs, each containing `words_count` words.
+
+* Words in each paragraph are space-separated
+* Each paragraph (except the last) ends with a **line break (`\n`)**
+* No punctuation is included in the output
+
+```python
+get_random_persian_paragraph(5, 2)
+# Output:
+# 'صبح روشن خانه امید درخت
+# شب آرام رود ساکت طلوع'
+```
+
+---
+
+## 🔗 Sources / Data References
+
+This project uses publicly available Persian word lists from the following sources:
+
+* [https://github.com/shahind/Persian-Words-Database](https://github.com/shahind/Persian-Words-Database)
+* [http://khodam.altervista.org/لیست-همه-کلمات-فارسی-مجموعه-کامل/](http://khodam.altervista.org/%D9%84%DB%8C%D8%B3%D8%AA-%D9%87%D9%85%D9%87-%DA%A9%D9%84%D9%85%D8%A7%D8%AA-%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87-%DA%A9%D8%A7%D9%85%D9%84/)
+
+---
+
+## ✅ Suitable for
+
+* Random Persian content generation
+* Educational applications
+* Linguistic research
+* UI/UX placeholder text
+* Fun language experiments!
+
+---
+
+## 📌 License
+
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute with attribution.
+
