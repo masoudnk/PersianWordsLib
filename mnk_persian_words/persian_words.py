@@ -1,12 +1,37 @@
 import random
 import sqlite3
+import zipfile
+import tempfile
+import os
+import importlib.resources as pkg_resources
+import mnk_persian_words.data
+
+def extract_db():
+    temp_dir = tempfile.gettempdir()
+    extract_path = os.path.join(temp_dir, 'words.db')
+
+    # اگر فایل دیتابیس از قبل وجود داشت، همان را برگردان
+    if os.path.exists(extract_path):
+        return extract_path
+
+    # در غیر این صورت، فایل فشرده را استخراج کن
+    with pkg_resources.files(mnk_persian_words.data, 'words.db.zip') as zip_path:
+        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+            zip_ref.extract('words.db', temp_dir)
+    return extract_path
+
+def connect_db():
+    db_path = extract_db()
+    import sqlite3
+    conn = sqlite3.connect(db_path)
+    return conn
 
 words = []
 
 def load_words_from_db(db_path: str = "words.db", table_name: str = "words") -> list[str]:
     global words
     try:
-        conn = sqlite3.connect(db_path)
+        conn = connect_db()
         cur = conn.cursor()
         cur.execute(f"SELECT word FROM {table_name}")
         words = [row[0] for row in cur.fetchall()]

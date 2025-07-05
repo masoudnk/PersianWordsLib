@@ -1,0 +1,2 @@
+include mnk_persian_words/data/*.zip
+include mnk_persian_words/data/*.gz

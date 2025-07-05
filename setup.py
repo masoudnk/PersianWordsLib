@@ -14,7 +14,7 @@ setup(
     url="https://github.com/masoudnk/PersianWordsLib",
     include_package_data=True,
     package_data={
-        "mnk_persian_words": ["data/*.db"],
+        "mnk_persian_words": ["data/*.zip", "data/*.gz"],
     },
     classifiers=[
         "Programming Language :: Python :: 3",
